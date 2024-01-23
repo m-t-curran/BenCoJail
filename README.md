@@ -1,1 +1,1 @@
-This is our collaborative part of the internship during Igntie xznbfksdmnflksdmf.mds,nf,sdnf
+This is our collaborative part of the internship during Igntie 
