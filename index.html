@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;  /* Use flexbox */
+      justify-content: space-around;  /* Distribute items equally */
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background: #f1f1f1;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: #7a7373;
+      color: white;
+    }
+
+    .main {
+      padding: 16px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: white;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCSOapp</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #D4D0C9;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img{
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      padding: 10px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Add these styles for the box around individual icons */
+    .icon-box {
+      margin: 15px;
+      height: auto;
+      width: auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .icon-box img {
+      width: 50px;
+      height: 50px;
+      scale: inherit;
+      border: 4px solid #888; /* Set border color as desired */
+      border-radius: 10px; /* Set border radius as desired */
+      padding: 12px; /* Set padding as desired */
+      transition: transform 0.3s; /* Add smooth transition effect */
+      background-color: white;
+
+    }
+
+    /* Change the background color when hovering over individual icons */
+    .icon-box:hover img {
+      border: 8px solid #888; /* Set border color as desired */
+      border-radius: 20px;
+      transform: scale(1.05);
+      /* Set the desired scaling factor */
+    }
+
+.box-text{
+  width: 84px;
+  height: 132px;
+  scale: inherit;
+  border: 4px solid #888; /* Set border color as desired */
+  border-radius: 10px; /* Set border radius as desired */
+  padding: 12px; /* Set padding as desired */
+  transition: transform 0.3s; /* Add smooth transition effect */
+  background-color: #333;
+}
+    .box-textx:hover img {
+      border: 8px solid #888; /* Set border color as desired */
+      border-radius: 20px;
+      transform: scale(1.05);
+      /* Set the desired scaling factor */
+    }
+    /* Add these styles for the box around the text */
+.text-color-wht{
+  color: white;
+}
+
+    /* Change the background color when hovering over the text box */
+    .icon-box:hover .text-box {
+      background-color: #555; /* Set hover background color as desired */
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    nav section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    nav p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    /* Adjust the width and height of the images as needed */
+    nav img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* Adjust styles for small screens, e.g., mobile phones */
+      nav {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+
+      nav section {
+        margin-right: 10px;
+      }
+    }
+    h1 {
+      text-align: center;
+      width: auto;
+
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="icon-box">
+  <img src="./assets/bell.png" alt="Bell Icon">
+  </div>
+  <h2>Benton County Sheriff's Office</h2>
+  <div class="icon-box">
+  <img src="./assets/profile.png" alt="Profile Icon">
+  </div>
+</header>
+
+<main>
+  <div class="icon-row">
+    <div class="icon-box">
+      <a href="middle-apps/Jail.html"> <!-- Specify the URL of the destination page -->
+        <div class="box-text">
+          <div class="text-color-wht">
+            <img src="./assets/jail.png" alt="Jail Icon">
+          </div>
+          <p>Jail</p>
+        </div>
+      </a>
+    </div>
+    <div class="icon-box">
+      <a href="middle-apps/Active_Shooters.html">
+        <div class="box-text">
+          <img src="your_folder_path/active_shooters.png" alt="Active Shooters Icon">
+          <p>Active Shooters</p>
+        </div>
+      </a>
+    </div>
+    <div class="icon-box">
+      <a href="middle-apps/Shelters.html">
+        <div class="box-text">
+          <img src="your_folder_path/shelters.png" alt="Shelters Icon">
+          <p>Shelters</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="icon-row">
+    <div class="icon-box">
+      <a href="middle-apps/Warrants.html">
+        <div class="box-text">
+          <img src="your_folder_path/warrants.png" alt="Warrants Icon">
+          <p>Warrants</p>
+        </div>
+      </a>
+    </div>
+    <div class="icon-box">
+      <a href="middle-apps/Missing.html">
+        <div class="box-text">
+          <img src="your_folder_path/missing.png" alt="Missing Icon">
+          <p>Missing</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="Shield.html">Sheild</a>
+  <a href="Map.html">Map</a>
+  <a href="Settings.html">Settings</a>
+</div>
+
+</body>
+</html>

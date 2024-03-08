@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .startup-screen {
+            text-align: center;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loading-animation {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #3498db;
+            border-radius: 50%;
+            border-top: 5px solid #f1c40f;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .additional-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .scaling-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <title>Startup Screen</title>
+</head>
+<body>
+<div class="startup-screen">
+    <div class="loading-container">
+        <div class="additional-text">Benton County Sheriff's Office</div>
+        <div class="loading-animation"></div>
+        <div class="loading-text" id="loadingText">Loading... 0%</div>
+        <img class="scaling-image" src="idle.png" alt="Scaling Image">
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Simulate loading by setting a timeout (you can replace this with actual asset loading logic)
+        var totalAssets = 10; // Replace with the actual total number of assets
+        var assetsLoaded = 0;
+
+        function updateLoadingText() {
+            var percentage = Math.floor((assetsLoaded / totalAssets) * 100);
+            document.getElementById("loadingText").innerText = "Loading... " + percentage + "%";
+        }
+
+        function simulateAssetLoading() {
+            // Simulate loading each asset
+            for (var i = 0; i < totalAssets; i++) {
+                setTimeout(function () {
+                    assetsLoaded++;
+                    updateLoadingText();
+
+                    // Check if all assets are loaded
+                    if (assetsLoaded === totalAssets) {
+                        // Redirect to "Index.html" after all assets are loaded
+                        window.location.href = "Index.html";
+                    }
+                }, i * 150); // Simulating loading time for each asset (adjust as needed)
+            }
+        }
+
+        // Start simulating asset loading
+        simulateAssetLoading();
+    });
+</script>
+</body>
+</html>
